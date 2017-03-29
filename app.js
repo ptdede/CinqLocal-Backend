@@ -80,6 +80,6 @@ app.get('/list/credit-card/:uid/', (req, res) => {
 		})
 });
 
-app.listen(3000, () => {
+app.listen(1732, () => {
 	console.log('APP LISTEN')
 });
