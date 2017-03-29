@@ -32,11 +32,17 @@ app.post("/charge", (req, res) => {
 		.set("Authorization", "Basic " + API_KEY_CONVERTED)
 		.send(req.body)
 		.then((success, failure) => {
+			console.log("masuk0");
 			if(success) {
+				console.log("masuk1");
 				res.json(success.body);
 			} else {
+				console.log("masuk2");
 				res.json(failure.body);
 			}
+		})
+		.catch(err => {
+			res.send(err.response.text);
 		})
 });
 
